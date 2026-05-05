@@ -21,7 +21,11 @@ function getHumanChoice() {
     return choice;
 }
 
-let computer = getComputerChoice();
-let human = getHumanChoice();
-
-console.log(computer, human);
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (humanChoice === "rock" && computerChoice === "scissors" ) {
+        humanScore++;
+        return "You win! Rock beats scissors,";
+    }
+}
