@@ -21,4 +21,7 @@ function getHumanChoice() {
     return choice;
 }
 
-console.log(humanScore, computerScore);
+let computer = getComputerChoice();
+let human = getHumanChoice();
+
+console.log(computer, human);
