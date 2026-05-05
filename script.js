@@ -1,7 +1,5 @@
-let humanScore = 0;
-let computerScore = 0;
-
-
+    let humanScore = 0;
+    let computerScore = 0;
 
 function getComputerChoice() {
     const random = Math.random();
@@ -38,4 +36,38 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 
-    console.log(playRound(getHumanChoice(), getComputerChoice()));  
+function playGame() {
+
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice));
+
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice));
+
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice));
+
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice));
+
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice));
+}
+
+playGame();
+
+console.log("Human Score:", humanScore);
+console.log("Computer Score:", computerScore);
+
+if (humanScore > computerScore) {
+console.log("You win the game! Congrats!");
+} else if (computerScore > humanScore) {
+    console.log("You lose the game! Better luck next time!");
+} else {
+    console.log("The game is a tie! Try Again!");
+}
