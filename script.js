@@ -22,10 +22,20 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
         return "It's a tie!";
-    } else if (humanChoice === "rock" && computerChoice === "scissors" ) {
+    } else if (
+    (humanChoice === "rock" && computerChoice === "scissors" )
+        || (humanChoice === "paper" && computerChoice === "rock" )
+        || (humanChoice === "scissors" && computerChoice === "paper") 
+    ) {
         humanScore++;
-        return "You win! Rock beats scissors,";
+        return "You win! Dude";
+    }  else {
+            computerScore++;
+            return "You lose! Dawg";
+        }
     }
-}
+
+    console.log(playRound(getHumanChoice(), getComputerChoice()));  
