@@ -1,3 +1,8 @@
+let humanScore = 0;
+let computerScore = 0;
+
+
+
 function getComputerChoice() {
     const random = Math.random();
 
@@ -16,4 +21,4 @@ function getHumanChoice() {
     return choice;
 }
 
-console.log(getHumanChoice());
+console.log(humanScore, computerScore);
