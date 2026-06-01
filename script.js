@@ -40,34 +40,38 @@ function playGame() {
 
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice));
+    result.textContent = playRound(humanChoice, computerChoice);
 
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice));
+    result.textContent = playRound(humanChoice, computerChoice);
 
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice));
+    result.textContent = playRound(humanChoice, computerChoice);
 
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice));
+    result.textContent = playRound(humanChoice, computerChoice);
 
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice));
+    result.textContent = playRound(humanChoice, computerChoice);
 }
 
 playGame();
 
-console.log("Human Score:", humanScore);
-console.log("Computer Score:", computerScore);
+result.textContent = "Human Score: " + humanScore;
+result.textContent = "Computer Score:" + computerScore;
 
 if (humanScore > computerScore) {
-console.log("You win the game! Congrats!");
+result.textContent = "You win the game! Congrats!";
 } else if (computerScore > humanScore) {
-    console.log("You lose the game! Better luck next time!");
+    result.textContent = "You lose the game! Better luck next time!";
 } else {
-    console.log("The game is a tie! Try Again!");
+    result.textContent = "The game is a tie! Try Again!";
 }
+
+rockBtn.addEventListener("click", () => {
+    playRound("rock");
+});
